@@ -40,6 +40,8 @@ GameObject:
   - component: {fileID: 4942984655561074}
   - component: {fileID: 114470594318865994}
   - component: {fileID: 114481308639937744}
+  - component: {fileID: 114693015150561924}
+  - component: {fileID: 114147849825279240}
   m_Layer: 0
   m_Name: Player-Mgr
   m_TagString: Untagged
@@ -54,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208637267423222}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 654, z: 113}
+  m_LocalPosition: {x: 0, y: 654, z: -99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4942984655561074}
@@ -67,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523365110890844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 692, z: 3029}
+  m_LocalPosition: {x: -17, y: 867, z: 3473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4864033664421872}
@@ -117,6 +119,24 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208637267423222}
   m_Enabled: 1
+--- !u!114 &114147849825279240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523365110890844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3fb75a63c637e45a792fc975e54625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitals: {fileID: 114693015150561924}
+  sIcon: {fileID: 0}
+  _fill: 0
+  initCharge: 600
+  currCharge: 600
+  hedgeVal: 0.001
+  testSK: 50
 --- !u!114 &114470594318865994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,6 +150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pM: {fileID: 1523365110890844}
   sld: {fileID: 0}
+  dsh: {fileID: 1400891956606322, guid: 523b84197111c7a4a92567eebcfe5e96, type: 2}
+  dsL: {fileID: 4942984655561074}
 --- !u!114 &114481308639937744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,6 +163,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2fb0c649283b7478c54cc4d69f84db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vitals: {fileID: 114693015150561924}
+  hIcon: {fileID: 0}
+  _fill: 1
+  initHealth: 1000
+  currHealth: 1000
+  hedgeVal: 0.001
+  testDMG: 50
+--- !u!114 &114693015150561924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523365110890844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c40d6749e62a34096578ce59482b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  dragon_name: 
+  lcapVal: 0
+  levelVal: 0
+  healthVal: 0
+  firerateVal: 0
+  skillVal: 0
+  crsVal: 0
+  lrsVal: 0
+  armorVal: 0
+  defenseVal: 0
+  speedVal: 0
+  accuracyVal: 0
+  dragon_type: 4
 --- !u!114 &114770810912115838
 MonoBehaviour:
   m_ObjectHideFlags: 1

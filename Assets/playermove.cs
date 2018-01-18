@@ -6,6 +6,13 @@ using UnityEngine.UI;
 public class playermove : MonoBehaviour {
 	public GameObject pM;
 	public Slider sld;
+
+	public GameObject dsh;
+	public Transform dsL; 
+
+
+
+
 	// Use this for initialization
 	public void sliderChng (float newValue) {
 
@@ -16,18 +23,41 @@ public class playermove : MonoBehaviour {
 		pos.x = newValue;
 		pM.transform.position = pos;
 
+	}
 
 
 
-	// Update is called once per frame
+	void Start(){
+		
 	
 
 
-	
-}	
-	void Update(){
-		transform.position += new Vector3(0,0,-1);
+
+
+
 
 	}
 
+
+	void Update(){
+		transform.position += new Vector3 (0, 0, -1);
+
+
+
+		if (Input.GetKeyDown (KeyCode.A)) {
+
+			fire ();
+
+		}
+
+	}
+
+	void fire(){
+		
+		var shot = (GameObject)Instantiate (dsh, dsL.position ,dsL.rotation);
+		Destroy (shot, 1.0f);
+
+	}
+
+		
 }
